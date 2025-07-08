@@ -53,7 +53,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shanInfotech.collectionsExtend.InterviewMain</mainClass>
+                            <mainClass>com.shanInfotech.collectionsExtend.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
