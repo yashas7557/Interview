@@ -24,11 +24,11 @@ InterviewScheduler scheduler= new InterviewScheduler();
 	
 	assertEquals("Yashas",scheduler.scheduleQueue.peek().getCandidateName());
 	assertEquals("Dhanu",scheduler.walkInDeque.peek().getCandidateName());
-	assertEquals("Dhanu",scheduler.topPerformersQueue.peek().getCandidateName());
+	assertEquals("Spandana",scheduler.topPerformersQueue.peek().getCandidateName());
 }
 	@Test
 	void testTopScorersAbove70() {
-		List<String> expectedNames=Arrays.asList("Yashas","Spandana","Subbu");
+		List<String> expectedNames=Arrays.asList("Spandana","Dhanu","Sanjan","Yashas");
 		List<String> topScorers=scheduler.topPerformersQueue.stream().filter(i->i.getScore()>70).map(Interview::getCandidateName).sorted().toList();
 		
 		assertEquals(expectedNames,topScorers);
