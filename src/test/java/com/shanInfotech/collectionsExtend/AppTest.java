@@ -14,6 +14,7 @@ import com.shanInfotech.collectionsExtendEx.InterviewScheduler;
 public class AppTest {
 
 InterviewScheduler scheduler= new InterviewScheduler();
+@Test
 	void testScedulerCoreFlow() {
 	scheduler.scheduleInterview(new Interview(1,"Yashas",75,"10:00AM"));
 	scheduler.scheduleInterview(new Interview(2,"Spandana",95,"10:30AM"));
@@ -25,7 +26,7 @@ InterviewScheduler scheduler= new InterviewScheduler();
 	assertEquals("Dhanu",scheduler.walkInDeque.peek().getCandidateName());
 	assertEquals("Dhanu",scheduler.topPerformersQueue.peek().getCandidateName());
 }
-	
+	@Test
 	void testTopScorersAbove70() {
 		List<String> expectedNames=Arrays.asList("Yashas","Spandana","Subbu");
 		List<String> topScorers=scheduler.topPerformersQueue.stream().filter(i->i.getScore()>70).map(Interview::getCandidateName).sorted().toList();
